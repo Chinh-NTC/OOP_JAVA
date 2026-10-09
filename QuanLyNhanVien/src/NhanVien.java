@@ -68,6 +68,14 @@ public abstract class NhanVien {
         this.diaChi = diaChi;
     }
 
+    // Method inThongTinNhanVien
+    public void inThongTinNhanVien(){
+        System.out.println("Mã nhân viên: " + maNV);
+        System.out.println("Tên nhân viên: " + tenNV);
+        System.out.println("Tuổi: " + tuoi);
+        System.out.println("Dia chi: " + diaChi);
+    }
+
     // Method abstract
     public abstract double tinhLuong();
 }
