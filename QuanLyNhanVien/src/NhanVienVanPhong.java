@@ -25,6 +25,7 @@ public class NhanVienVanPhong extends NhanVien {
 
     @Override
     public double tinhLuong(){
-        
+        // Lương nhân viên văn phòng được tính theo công thức: luongCoBan + (soGioLam * luongTheoGio)
+        return super.luongCoBan + soGioLam * luongTheoGio;
     }
 }
