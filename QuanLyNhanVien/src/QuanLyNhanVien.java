@@ -88,4 +88,14 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
             nv.inThongTinNhanVien();
         }
     }
+
+    @Override
+    public NhanVien timKiemNhanVien(String maNV){
+        for(NhanVien nv : dsNV){
+            if(nv.getMaNV().equals(maNV)){
+                return nv;
+            }
+        }
+        return null;
+    }
 }
