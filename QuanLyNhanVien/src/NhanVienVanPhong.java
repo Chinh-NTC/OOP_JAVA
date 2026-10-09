@@ -23,5 +23,8 @@ public class NhanVienVanPhong extends NhanVien {
         this.soGioLam = soGioLam;
     }
 
-
+    @Override
+    public double tinhLuong(){
+        
+    }
 }
