@@ -21,6 +21,11 @@ public abstract class NhanVien {
     }
 
     public void setMaNV(String maNV) {
+        if(maNV == null || maNV.isEmpty()) {
+            throw new IllegalArgumentException(
+                    "Lỗi. Mã nhân viên không được để trống!"
+            );
+        }
         this.maNV = maNV;
     }
 
@@ -47,6 +52,4 @@ public abstract class NhanVien {
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
-
-
 }
