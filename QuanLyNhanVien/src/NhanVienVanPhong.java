@@ -32,7 +32,7 @@ public class NhanVienVanPhong extends NhanVien {
         System.out.printf("Lương: %.2f\n", tinhLuong());
         System.out.println("-----------------------------");
     }
-    
+
     @Override
     public double tinhLuong(){
         // Lương nhân viên văn phòng được tính theo công thức: luongCoBan + (soGioLam * luongTheoGio)

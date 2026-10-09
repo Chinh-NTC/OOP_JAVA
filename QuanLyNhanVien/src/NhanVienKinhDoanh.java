@@ -38,6 +38,17 @@ public class NhanVienKinhDoanh extends NhanVien {
     }
 
     @Override
+    public void inThongTinNhanVien(){
+        System.out.println("---- NHÂN VIÊN KINH DOANH ----");
+        super.inThongTinNhanVien();
+        System.out.printf("Doanh thu: %.2f\n", doanhThu);
+        System.out.println("Phần trăm hoa hồng: " + hoaHong);
+        System.out.println("Phụ cấp: " + phuCap);
+        System.out.printf("Lương: %.2f\n", tinhLuong());
+        System.out.println("-----------------------------");
+    }
+
+    @Override
     public double tinhLuong(){
         // Lương nhân viên kinh doanh được tính theo công thức: luongCoBan + (doanhThu * hoaHong) + phuCap
         return super.luongCoBan + phuCap + doanhThu * hoaHong;
