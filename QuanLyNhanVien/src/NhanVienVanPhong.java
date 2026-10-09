@@ -38,4 +38,10 @@ public class NhanVienVanPhong extends NhanVien {
         // Lương nhân viên văn phòng được tính theo công thức: luongCoBan + (soGioLam * luongTheoGio)
         return super.luongCoBan + soGioLam * luongTheoGio;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSố giờ làm: " + soGioLam +
+                "\nLương: " + tinhLuong();
+    }
 }
