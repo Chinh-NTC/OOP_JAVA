@@ -53,4 +53,12 @@ public class NhanVienKinhDoanh extends NhanVien {
         // Lương nhân viên kinh doanh được tính theo công thức: luongCoBan + (doanhThu * hoaHong) + phuCap
         return super.luongCoBan + phuCap + doanhThu * hoaHong;
     }
+
+    @Override
+    public String toString(){
+        return super.toString() + "Doanh thu: " + doanhThu +
+                "\nHoa hồng: " + hoaHong +
+                "\nPhụ cấp: " + phuCap +
+                "\nLương: " + tinhLuong();
+    }
 }

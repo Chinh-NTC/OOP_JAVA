@@ -83,7 +83,7 @@ public abstract class NhanVien {
                 "\nTuổi: " + tuoi +
                 "\nĐịa chỉ: " + diaChi;
     }
-    
+
     // Method abstract
     public abstract double tinhLuong();
 }
