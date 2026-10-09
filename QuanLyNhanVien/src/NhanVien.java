@@ -34,6 +34,11 @@ public abstract class NhanVien {
     }
 
     public void setTenNV(String tenNV) {
+        if(tenNV == null || tenNV.isEmpty()) {
+            throw new IllegalArgumentException(
+                    "Lỗi. Tên nhân viên không được để trống!"
+            );
+        }
         this.tenNV = tenNV;
     }
 
