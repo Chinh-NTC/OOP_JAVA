@@ -83,6 +83,9 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
     // Method in danh sách nhân viên
     @Override
     public void inDanhSachNhanVien(){
-        
+        System.out.println("--- DANH SÁCH NHÂN VIÊN ---");
+        for(NhanVien nv : dsNV){
+            nv.inThongTinNhanVien();
+        }
     }
 }
