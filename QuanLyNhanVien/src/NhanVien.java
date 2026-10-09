@@ -60,6 +60,11 @@ public abstract class NhanVien {
     }
 
     public void setDiaChi(String diaChi) {
+        if(diaChi == null || diaChi.isEmpty()) {
+            throw new IllegalArgumentException(
+                    "Lỗi. Địa chỉ không được để trống!"
+            );
+        }
         this.diaChi = diaChi;
     }
 }
