@@ -36,4 +36,9 @@ public class NhanVienKinhDoanh extends NhanVien {
         }
         this.hoaHong = hoaHong;
     }
+
+    @Override
+    public double tinhLuong(){
+        
+    }
 }
