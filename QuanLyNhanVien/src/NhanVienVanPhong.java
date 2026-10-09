@@ -15,6 +15,13 @@ public class NhanVienVanPhong extends NhanVien {
     }
 
     public void setSoGioLam(int soGioLam) {
+        if(soGioLam < 0){
+            throw new IllegalArgumentException(
+                    "Lỗi. Số giờ làm không được âm!"
+            );
+        }
         this.soGioLam = soGioLam;
     }
+
+
 }
