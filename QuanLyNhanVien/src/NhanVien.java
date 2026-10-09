@@ -47,6 +47,11 @@ public abstract class NhanVien {
     }
 
     public void setTuoi(int tuoi) {
+        if(tuoi < 18 || tuoi > 50) {
+            throw new IllegalArgumentException(
+                    "Lỗi. Tuổi nhân viên phải nằm trong khoảng [18 - 50]!"
+            );
+        }
         this.tuoi = tuoi;
     }
 
