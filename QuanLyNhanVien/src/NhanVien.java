@@ -5,6 +5,9 @@ public abstract class NhanVien {
     private String diaChi;
     final int luongCoBan = 3000000;
 
+    // Constructor
+    public NhanVien() {}
+    
     public NhanVien(String maNV, String tenNV, int tuoi, String diaChi) {
         this.maNV = maNV;
         this.tenNV = tenNV;
