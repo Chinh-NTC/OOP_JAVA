@@ -10,6 +10,7 @@ public class Main{
             System.out.println("1. Thêm nhân viên");
             System.out.println("2. In danh sách nhân viên");
             System.out.println("3. Tìm kiếm nhân viên");
+            System.out.println("4. Xóa nhân viên");
             System.out.print("Lựa chọn chức năng: ");
             int choice = Integer.parseInt(sc.nextLine());
 
@@ -30,6 +31,11 @@ public class Main{
                     else{
                         nvTim.inThongTinNhanVien();
                     }
+                    break;
+                case 4:
+                    System.out.print("Nhập mã nhân viên muốn xóa: ");
+                    String maNV_xoa = sc.nextLine();
+                    qlnv.xoaNhanVien(maNV_xoa);
                     break;
             }
         }
