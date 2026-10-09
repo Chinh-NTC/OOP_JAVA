@@ -9,6 +9,7 @@ public class Main{
             System.out.println("--- MENU ---");
             System.out.println("1. Thêm nhân viên");
             System.out.println("2. In danh sách nhân viên");
+            System.out.println("3. Tìm kiếm nhân viên");
             System.out.print("Lựa chọn chức năng: ");
             int choice = Integer.parseInt(sc.nextLine());
 
@@ -18,6 +19,17 @@ public class Main{
                     break;
                 case 2:
                     qlnv.inDanhSachNhanVien();
+                    break;
+                case 3:
+                    System.out.print("Nhập mã nhân viên muốn tìm: ");
+                    String maNV = sc.nextLine();
+                    NhanVien nvTim = qlnv.timKiemNhanVien(maNV);
+                    if(nvTim == null){
+                        System.out.println("Không tìm thấy nhân viên có mã: " + maNV);
+                    }
+                    else{
+                        nvTim.inThongTinNhanVien();
+                    }
                     break;
             }
         }
