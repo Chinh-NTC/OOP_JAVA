@@ -79,4 +79,10 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
             System.out.println(e.getMessage());
         }
     }
+
+    // Method in danh sách nhân viên
+    @Override
+    public void inDanhSachNhanVien(){
+        
+    }
 }
