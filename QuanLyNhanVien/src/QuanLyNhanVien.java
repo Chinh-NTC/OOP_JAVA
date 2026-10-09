@@ -98,4 +98,19 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
         }
         return null;
     }
+
+    @Override
+    public void xoaNhanVien(String maNV){
+        if(dsNV == null || dsNV.isEmpty()){
+            System.out.println("Danh sách rỗng!");
+            return;
+        }
+        if(timKiemNhanVien(maNV) != null){
+            dsNV.remove(timKiemNhanVien(maNV));
+            System.out.println("Đã xóa thanh công nhân viên mã: " + maNV);
+        }
+        else {
+            System.out.println("Không tìm thấy nhân viên mã: " + maNV);
+        }
+    }
 }
