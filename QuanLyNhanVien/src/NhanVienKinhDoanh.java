@@ -9,4 +9,21 @@ public class NhanVienKinhDoanh extends NhanVien {
         this.doanhThu = doanhThu;
         this.hoaHong = hoaHong;
     }
+
+    // Getter/Setter
+    public double getDoanhThu() {
+        return doanhThu;
+    }
+
+    public void setDoanhThu(double doanhThu) {
+        this.doanhThu = doanhThu;
+    }
+
+    public double getHoaHong() {
+        return hoaHong;
+    }
+
+    public void setHoaHong(double hoaHong) {
+        this.hoaHong = hoaHong;
+    }
 }
