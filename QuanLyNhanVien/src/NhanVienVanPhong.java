@@ -7,4 +7,14 @@ public class NhanVienVanPhong extends NhanVien {
         super(maNV, tenNV, tuoi, diaChi);
         this.soGioLam = soGioLam;
     }
+
+
+    //Getter/ Setter
+    public int getSoGioLam() {
+        return soGioLam;
+    }
+
+    public void setSoGioLam(int soGioLam) {
+        this.soGioLam = soGioLam;
+    }
 }
