@@ -76,6 +76,14 @@ public abstract class NhanVien {
         System.out.println("Dia chi: " + diaChi);
     }
 
+    @Override
+    public String toString() {
+        return "Mã nhân viên: " + maNV +
+                "\nTên nhân viên: " + tenNV +
+                "\nTuổi: " + tuoi +
+                "\nĐịa chỉ: " + diaChi;
+    }
+    
     // Method abstract
     public abstract double tinhLuong();
 }
