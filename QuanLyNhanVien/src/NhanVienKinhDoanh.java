@@ -29,6 +29,11 @@ public class NhanVienKinhDoanh extends NhanVien {
     }
 
     public void setHoaHong(double hoaHong) {
+        if(hoaHong <= 0){
+            throw new IllegalArgumentException(
+                    "Lỗi. Phần trăm hoa hồng không được bé hơn hoặc bằng 0!"
+            );
+        }
         this.hoaHong = hoaHong;
     }
 }
