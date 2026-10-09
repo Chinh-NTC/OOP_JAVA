@@ -23,6 +23,16 @@ public class NhanVienVanPhong extends NhanVien {
         this.soGioLam = soGioLam;
     }
 
+    //Kế thừa method inThongTinNhanVien
+    @Override
+    public void inThongTinNhanVien(){
+        System.out.println("---- NHÂN VIÊN VĂN PHÒNG ----");
+        super.inThongTinNhanVien();
+        System.out.println("Số giờ làm: " + soGioLam);
+        System.out.printf("Lương: %.2f\n", tinhLuong());
+        System.out.println("-----------------------------");
+    }
+    
     @Override
     public double tinhLuong(){
         // Lương nhân viên văn phòng được tính theo công thức: luongCoBan + (soGioLam * luongTheoGio)
