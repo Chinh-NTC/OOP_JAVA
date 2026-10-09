@@ -34,7 +34,7 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
                     System.out.print("Địa chỉ: ");
                     String diaChi = sc.nextLine();
 
-                    System.out.println("Số giờ làm: ");
+                    System.out.print("Số giờ làm: ");
                     int soGioLam = Integer.parseInt(sc.nextLine());
 
                     // Khởi tạo nhân viên mới
