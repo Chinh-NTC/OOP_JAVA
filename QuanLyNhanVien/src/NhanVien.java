@@ -3,7 +3,7 @@ public abstract class NhanVien {
     private String tenNV;
     private int tuoi;
     private String diaChi;
-    final int luongCoBan = 3000000;
+    final double luongCoBan = 3000000;
 
     // Constructor
     public NhanVien() {}
@@ -47,4 +47,6 @@ public abstract class NhanVien {
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
+
+
 }
