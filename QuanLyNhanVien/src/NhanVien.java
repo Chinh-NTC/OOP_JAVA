@@ -67,4 +67,7 @@ public abstract class NhanVien {
         }
         this.diaChi = diaChi;
     }
+
+    // Method abstract
+    public abstract double tinhLuong();
 }
