@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class QuanLyNhanVien implements IQuanLyNhanVien{
     private ArrayList<NhanVien> dsNV;
@@ -10,7 +11,72 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
 
     // Method thêm nhân viên
     @Override
-    public void themNhanVien(){
-        
+    public void themNhanVien(Scanner sc){
+        try {
+            while(true){
+                System.out.println("--- DANH MỤC NHÂN VIÊN ----");
+                System.out.println("1. Nhân viên văn phòng");
+                System.out.println("2. Nhân viên kinh doanh");
+                System.out.print("Lựa chọn loại nhân viên muốn thêm: ");
+                int choice = Integer.parseInt(sc.nextLine());
+
+                if(choice == 1){
+                    System.out.println("--- Thêm nhân viên văn phòng ---");
+                    System.out.print("Mã nhân viên: ");
+                    String maNV = sc.nextLine();
+
+                    System.out.print("Tên nhân viên: ");
+                    String tenNV = sc.nextLine();
+
+                    System.out.print("Tuổi: ");
+                    int tuoi = Integer.parseInt(sc.nextLine());
+
+                    System.out.print("Địa chỉ: ");
+                    String diaChi = sc.nextLine();
+
+                    System.out.println("Số giờ làm: ");
+                    int soGioLam = Integer.parseInt(sc.nextLine());
+
+                    // Khởi tạo nhân viên mới
+                    NhanVien nvVP = new NhanVienVanPhong(maNV, tenNV, tuoi, diaChi, soGioLam);
+                    // Thêm vào danh sách
+                    dsNV.add(nvVP);
+                    System.out.println("-> Đã thêm thành công nhân viên mã: " + maNV);
+                    break;
+                }
+                else if(choice == 2){
+                    System.out.println("---- Thêm nhân viên kinh doann ----");
+                    System.out.print("Mã nhân viên: ");
+                    String maNV = sc.nextLine();
+
+                    System.out.print("Tên nhân viên: ");
+                    String tenNV = sc.nextLine();
+
+                    System.out.print("Tuổi: ");
+                    int tuoi = Integer.parseInt(sc.nextLine());
+
+                    System.out.print("Địa chỉ: ");
+                    String diaChi = sc.nextLine();
+
+                    System.out.print("Doanh thu: ");
+                    double doanhThu = Double.parseDouble(sc.nextLine());
+
+                    System.out.print("Phần trăm hoa hồng (%): ");
+                    double hoaHong = Double.parseDouble(sc.nextLine());
+
+                    // Khởi tạo nhân viên mới
+                    NhanVien nvKD = new NhanVienKinhDoanh(maNV, tenNV, tuoi, diaChi, doanhThu, hoaHong);
+                    // Thêm nhân viên vào danh sách
+                    dsNV.add(nvKD);
+                    System.out.println("-> Đã thêm thành công nhân viên mã: " + maNV);
+                    break;
+                }
+                else {
+                    System.out.println("Lỗi. Vui lòng chọn lại!");
+                }
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
