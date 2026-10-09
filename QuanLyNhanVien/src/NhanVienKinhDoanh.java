@@ -16,6 +16,11 @@ public class NhanVienKinhDoanh extends NhanVien {
     }
 
     public void setDoanhThu(double doanhThu) {
+        if(doanhThu < 0){
+            throw new IllegalArgumentException(
+                    "Lỗi. Doanh thu không được âm!"
+            );
+        }
         this.doanhThu = doanhThu;
     }
 
