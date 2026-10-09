@@ -7,4 +7,10 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
     public QuanLyNhanVien() {
         dsNV = new ArrayList<>();
     }
+
+    // Method thêm nhân viên
+    @Override
+    public void themNhanVien(){
+        
+    }
 }
