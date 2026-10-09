@@ -9,10 +9,10 @@ public abstract class NhanVien {
     public NhanVien() {}
 
     public NhanVien(String maNV, String tenNV, int tuoi, String diaChi) {
-        this.maNV = maNV;
-        this.tenNV = tenNV;
-        this.tuoi = tuoi;
-        this.diaChi = diaChi;
+        setMaNV(maNV);
+        setTenNV(tenNV);
+        setDiaChi(diaChi);
+        setTuoi(tuoi);
     }
 
     // Getter, Setter
