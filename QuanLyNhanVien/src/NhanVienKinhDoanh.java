@@ -56,7 +56,7 @@ public class NhanVienKinhDoanh extends NhanVien {
 
     @Override
     public String toString(){
-        return super.toString() + "Doanh thu: " + doanhThu +
+        return super.toString() + "\nDoanh thu: " + doanhThu +
                 "\nHoa hồng: " + hoaHong +
                 "\nPhụ cấp: " + phuCap +
                 "\nLương: " + tinhLuong();
