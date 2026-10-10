@@ -108,7 +108,7 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
             return;
         }
         if(timKiemNhanVien(maNV) != null){
-            dsNV.remove(timKiemNhanVien(maNV));
+            dsNV.remove(maNV);
             System.out.println("Đã xóa thanh công nhân viên mã: " + maNV);
         }
         else {
