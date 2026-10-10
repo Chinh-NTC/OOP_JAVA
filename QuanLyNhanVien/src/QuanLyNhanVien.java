@@ -1,12 +1,14 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class QuanLyNhanVien implements IQuanLyNhanVien{
-    private ArrayList<NhanVien> dsNV;
+    private Map<String, NhanVien> dsNV;
 
     // Constructor
     public QuanLyNhanVien() {
-        dsNV = new ArrayList<>();
+        dsNV = new HashMap<>();
     }
 
     // Method thêm nhân viên
@@ -40,7 +42,7 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
                     // Khởi tạo nhân viên mới
                     NhanVien nvVP = new NhanVienVanPhong(maNV, tenNV, tuoi, diaChi, soGioLam);
                     // Thêm vào danh sách
-                    dsNV.add(nvVP);
+                    dsNV.put(maNV, nvVP);
                     System.out.println("-> Đã thêm thành công nhân viên mã: " + maNV);
                     break;
                 }
@@ -67,7 +69,7 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
                     // Khởi tạo nhân viên mới
                     NhanVien nvKD = new NhanVienKinhDoanh(maNV, tenNV, tuoi, diaChi, doanhThu, hoaHong);
                     // Thêm nhân viên vào danh sách
-                    dsNV.add(nvKD);
+                    dsNV.put(maNV, nvKD);
                     System.out.println("-> Đã thêm thành công nhân viên mã: " + maNV);
                     break;
                 }
@@ -84,16 +86,16 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
     @Override
     public void inDanhSachNhanVien(){
         System.out.println("--- DANH SÁCH NHÂN VIÊN ---");
-        for(NhanVien nv : dsNV){
-            nv.inThongTinNhanVien();
+        for(Map.Entry<String, NhanVien> entry : dsNV.entrySet()){
+            entry.getValue().inThongTinNhanVien();
         }
     }
 
     @Override
     public NhanVien timKiemNhanVien(String maNV){
-        for(NhanVien nv : dsNV){
-            if(nv.getMaNV().equals(maNV)){
-                return nv;
+        for(Map.Entry<String, NhanVien> entry : dsNV.entrySet()){
+            if(entry.getKey().equals(maNV)){
+                return entry.getValue();
             }
         }
         return null;
