@@ -41,6 +41,11 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
 
                     // Khởi tạo nhân viên mới
                     NhanVien nvVP = new NhanVienVanPhong(maNV, tenNV, tuoi, diaChi, soGioLam);
+                    // Kiểm tra nhân viên tồn tại
+                    if(dsNV.containsKey(maNV)){
+                        System.out.println("Mã " + maNV + " đã tồn tại!");
+                        return;
+                    }
                     // Thêm vào danh sách
                     dsNV.put(maNV, nvVP);
                     System.out.println("-> Đã thêm thành công nhân viên mã: " + maNV);
@@ -68,6 +73,11 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
 
                     // Khởi tạo nhân viên mới
                     NhanVien nvKD = new NhanVienKinhDoanh(maNV, tenNV, tuoi, diaChi, doanhThu, hoaHong);
+                    // Kiểm tra nhân viên tồn tại
+                    if(dsNV.containsKey(maNV)){
+                        System.out.println("Mã " + maNV + " đã tồn tại!");
+                        return;
+                    }
                     // Thêm nhân viên vào danh sách
                     dsNV.put(maNV, nvKD);
                     System.out.println("-> Đã thêm thành công nhân viên mã: " + maNV);
