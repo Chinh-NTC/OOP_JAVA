@@ -93,12 +93,7 @@ public class QuanLyNhanVien implements IQuanLyNhanVien{
 
     @Override
     public NhanVien timKiemNhanVien(String maNV){
-        for(Map.Entry<String, NhanVien> entry : dsNV.entrySet()){
-            if(entry.getKey().equals(maNV)){
-                return entry.getValue();
-            }
-        }
-        return null;
+        return dsNV.get(maNV);
     }
 
     @Override
