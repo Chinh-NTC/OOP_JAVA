@@ -11,6 +11,7 @@ public class Main{
             System.out.println("2. In danh sách nhân viên");
             System.out.println("3. Tìm kiếm nhân viên");
             System.out.println("4. Xóa nhân viên");
+            System.out.println("0. Thoát");
             System.out.print("Lựa chọn chức năng: ");
             int choice = Integer.parseInt(sc.nextLine());
 
@@ -37,6 +38,11 @@ public class Main{
                     String maNV_xoa = sc.nextLine();
                     qlnv.xoaNhanVien(maNV_xoa);
                     break;
+                case 0:
+                    System.out.println("-> Đã thoát khỏi chương trình!");
+                    return;
+                default:
+                    System.out.println("Lỗi. Vui lòng chọn đúng chức năng!");
             }
         }
     }
